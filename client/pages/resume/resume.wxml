@@ -1,0 +1,106 @@
+<view>
+  <view style=' display: flex;flex-direction: row;justify-content: center; padding:10px 0px;background-color:#29B1FE;'>
+    <text>我的简历模板</text>
+  </view>
+  <form bindsubmit="formSubmit" bindreset="formReset">
+    <!--头部-->
+    <view class="head">
+      <view class="uploader" style="padding: 0px 20px;">
+
+        <view class="uploader-container" wx:if="{{imgUrl != 'default.png'}}">
+          <image class="uploader-image" src="{{imgUrl}}" mode="aspectFit" bindtap="doUpload" style="width: 125px; height: 154px;"></image>
+        </view>
+      </view>
+      <view class="summary">
+        <view class="section">
+          <view class='zone'>
+            <i-icon type="mine_fill" size="18" color="#4573ff" />
+            <view class="section__title">姓名</view>
+          </view>
+          <input name="name" />
+        </view>
+        <view class="section">
+          <view class='zone'>
+            <i-icon type="tasklist_fill" size="18" color="#4573ff" />
+            <view class="section__title">求职意向</view>
+          </view>
+          <input name="idea" />
+        </view>
+        <view class="section">
+          <view class='zone'>
+            <i-icon type="clock_fill" size="18" color="#4573ff" />
+            <view class="section__title">生日</view>
+          </view>
+          <picker mode="date" value="{{date}}" start="1998-01-01" end="2025-12-31" bindchange="bindDateChange" name="age" style='padding:5px 0px;font-size:15px'>
+            <view class="picker">
+              {{date}}
+            </view>
+          </picker>
+        </view>
+        <view class="section">
+          <view class='zone'>
+            <i-icon type="mobilephone_fill" size="18" color="#4573ff" />
+            <view class="section__title">电话号码</view>
+          </view>
+          <input type="number" name="phone" />
+        </view>
+
+      </view>
+    </view>
+
+    <!--内容-->
+    <view class="body">
+      <view class="caption-wrap">
+        <i-collapse name="name1">
+          <i-collapse-item title="教育背景" name="name1">
+            <view slot="content">
+              <radio-group name="radio-group">
+                <label>
+                  <radio value="radio1" />radio1</label>
+                <label>
+                  <radio value="radio2" />radio2</label>
+              </radio-group>
+            </view>
+          </i-collapse-item>
+          <i-collapse-item title="行政经历" name="name2">
+            <view slot="content">
+              <checkbox-group name="checkbox">
+                <label>
+                  <checkbox value="checkbox1" />checkbox1</label>
+                <label>
+                  <checkbox value="checkbox2" />checkbox2</label>
+              </checkbox-group>
+            </view>
+          </i-collapse-item>
+          <i-collapse-item title="荣誉奖励" name="name3">
+            <view slot="content">
+              <checkbox-group name="checkbox">
+                <label>
+                  <checkbox value="checkbox1" />checkbox1</label>
+                <label>
+                  <checkbox value="checkbox2" />checkbox2</label>
+              </checkbox-group>
+            </view>
+          </i-collapse-item>
+          <i-collapse-item title="技能证书" name="name4">
+            <view slot="content">
+              <checkbox-group name="checkbox">
+                <label>
+                  <checkbox value="checkbox1" />checkbox1</label>
+                <label>
+                  <checkbox value="checkbox2" />checkbox2</label>
+              </checkbox-group>
+            </view>
+          </i-collapse-item>
+        </i-collapse>
+      </view>
+    </view>
+
+    <view class="btn-area" style='padding:20px 0px; display:flex; flex-direction:row ;align-items:center ;justify-content:space-around'>
+      <button formType="submit" type='primary' size='mini'>提交</button>
+      <button formType="reset" type='warn' size='mini'>重置</button>
+    </view>
+
+  </form>
+</view>
+<i-toast id="toast" />

@@ -1,0 +1,31 @@
+.i-collapse-item {
+  padding: 20px 8px 0px;
+}
+
+.i-collapse-item-title {
+  vertical-align: middle;
+}
+
+.i-collapse-item-title-wrap {
+  padding: 2px 0 0;
+  border-left: 3px solid #29B1FE;
+  background-color: #E2F4FF;
+}
+
+.i-collapse-item-content {
+  padding: 6px;
+  display: none;
+}
+
+.i-collapse-item-show-content {
+  display: block;
+}
+
+.i-collapse-item-arrow {
+  transition: transform 0.2s ease-in-out;
+}
+
+.i-collapse-item-arrow-show {
+  transition: transform 0.2s ease-in-out;
+  transform: rotate(90deg);
+}

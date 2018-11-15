@@ -1,0 +1,32 @@
+<view class='container'>
+  <view class='wide' bindtap='login'>
+    <image class="userinfo-avatar" src="{{logged ? userInfo.avatarUrl : './user-unlogin.png'}}" background-size="cover"></image>
+  </view>
+
+  <view class='wide'>
+    <text>职位类型</text>
+    <view class='sort'>
+      <block wx:for="{{list}}" wx:key="id">
+        <view bindtap='tp' data-sort-id='{{item.id}}' data-content='{{item.content}}'>
+          <text>{{item.id}}.{{item.content}}</text>
+        </view>
+      </block>
+    </view>
+  </view>
+
+  <view class='wide'>
+    <text>热门校招</text>
+    <swiper class='swiper' indicator-dots='true' autoplay='true' interval='5000' duration='500' circular='true'>
+      <block wx:for="{{list}}" wx:key="id">
+        <swiper-item>
+          <text>{{item.content}}</text>
+        </swiper-item>
+      </block>
+    </swiper>
+  </view>
+
+  <view class='wide'>
+    <text>广告</text>
+  </view>
+  
+</view>

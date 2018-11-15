@@ -1,0 +1,31 @@
+/* pages/useinfo/userinfo.wxss */
+.userinfo-avatar {
+    width: 100rpx;
+    height: 100rpx;
+    margin: 20rpx;
+    border-radius: 50%;
+    border:  1px blue outset;
+}
+.resumeSummary{
+  border: 1px springgreen solid ;
+  width:  95%;
+  display:  flex;
+  flex-direction:  row;
+  align-items: center;
+  justify-content: space-around;
+}
+.wallet{
+  border: 1px springgreen solid ;
+  width: 95%;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-around; 
+}
+.mypintuan{
+  border: 1px springgreen solid ;
+  width: 95%
+}
+text{
+  border: 1px  yellow solid ;
+}

@@ -1,0 +1,33 @@
+<view class='container'>
+  <view class='resumeSummary'>
+    <view id='touxiang'>
+      <image class='userinfo-avatar'></image>
+    </view>
+    <view>
+      <text>summary</text>
+    </view>
+  </view>
+
+  <view class='wallet'>
+    <view style='display: flex;align-items: center;'>
+      <image style='border: 1px  yellow solid ;height:50px; width:50px;'></image>
+    </view>
+    <view id='text'>
+      <text>100¥</text>
+    </view>
+  </view>
+
+  <view class='mypintuan'>
+    <view>
+      <text>my miantuan</text>
+    </view>
+    <view class='scrool'>
+      <scroll-view scroll-y style="height: 200px;">
+        <view id="green" class="scroll-view-item bc_green"></view>
+        <view id="red" class="scroll-view-item bc_red"></view>
+        <view id="yellow" class="scroll-view-item bc_yellow"></view>
+        <view id="blue" class="scroll-view-item bc_blue"></view>
+      </scroll-view>
+    </view>
+  </view>
+</view>

@@ -1,0 +1,53 @@
+/* pages/resume/resume.wxss */
+
+page {
+  background: #f6f6f6;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.summary {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  border-left-style: dotted;
+  border-left-color: #4573ff;
+  margin-top: 10px;
+}
+
+.zone{
+  display: flex;
+  flex-direction: row;
+  justify-content:  left
+}
+
+.section__title {
+  font-size: 15px;
+  padding: 5px 0px;
+}
+
+.section {
+  padding: 0px 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: left;
+}
+
+.section_gap {
+  padding: 0px 20px;
+}
+
+.uploader-container {
+  padding-top: 40px;
+  display: flex;
+  flex-direction: column;
+  align-items:  center;
+}
+
+.head {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+

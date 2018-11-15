@@ -1,0 +1,38 @@
+{
+  "pages": [
+    "pages/userinfo/userinfo",
+    "pages/welcome/welcome",
+    "pages/index/index",
+    "pages/sorts/sorts",
+    "pages/my/my",
+    "pages/resume/resume"
+    
+    
+  ],
+  "window": {
+    "backgroundColor": "#F6F6F6",
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor": "#F6F6F6",
+    "navigationBarTitleText": "校招宝",
+    "navigationBarTextStyle": "black"
+  },
+  "tabBar": {
+    "color": "#1895c9",
+    "selectedColor": "#1565C8",
+    "list": [
+      {
+        "pagePath": "pages/index/index",
+        "text": "主页",
+        "iconPath": "icons/index.png",
+        "selectedIconPath": "icons/index_slctd.png"
+      },
+      {
+        "pagePath": "pages/my/my",
+        "text": "我的简历模板",
+        "iconPath": "icons/resume.png",
+        "selectedIconPath": "icons/resume_slctd.png"
+      }
+    ]
+  },
+  "debug": false
+}

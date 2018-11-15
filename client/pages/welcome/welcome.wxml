@@ -1,0 +1,4 @@
+<!--pages/welcome/welcome.wxml-->
+<view class='container'>
+  <navigator open-type='switchTab' url='/pages/index/index'>校招宝</navigator>
+</view>

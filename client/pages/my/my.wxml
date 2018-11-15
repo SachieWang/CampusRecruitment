@@ -1,0 +1,21 @@
+<!--pages/my/my.wxml-->
+<view class='container'>
+  <block wx:if="{{isLogined}}">
+    <block wx:if="{{!isResumed}}">
+      <view> 您尚未创建简历 </view>
+      <button bindtap='resume'>去创建</button>
+    </block>
+    <view wx:else>简历情况</view>
+  </block>
+  <block wx:else>
+    <view>尚未登陆，请返回主页</view>
+  </block>
+  <block wx:if="{{debug}}">
+    <view>
+      <button bindtap='tologin'>登陆</button>
+      <button bindtap='tologout'>登出</button>
+      <button bindtap='have'>有</button>
+      <button bindtap='nohave'>没有</button>
+    </view>
+  </block>
+</view>
