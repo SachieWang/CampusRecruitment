@@ -1,13 +1,11 @@
 {
   "pages": [
-    "pages/userinfo/userinfo",
     "pages/welcome/welcome",
     "pages/index/index",
     "pages/sorts/sorts",
     "pages/my/my",
-    "pages/resume/resume"
-    
-    
+    "pages/resume/resume",
+    "pages/userinfo/userinfo"
   ],
   "window": {
     "backgroundColor": "#F6F6F6",
@@ -27,7 +25,7 @@
         "selectedIconPath": "icons/index_slctd.png"
       },
       {
-        "pagePath": "pages/my/my",
+        "pagePath": "pages/userinfo/userinfo",
         "text": "我的简历模板",
         "iconPath": "icons/resume.png",
         "selectedIconPath": "icons/resume_slctd.png"

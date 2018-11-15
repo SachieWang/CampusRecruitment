@@ -3,7 +3,7 @@
     <view id='touxiang'>
       <image class='userinfo-avatar'></image>
     </view>
-    <view>
+    <view bindtap='resume'>
       <text>summary</text>
     </view>
   </view>

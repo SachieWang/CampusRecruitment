@@ -62,5 +62,17 @@ Page({
    */
   onShareAppMessage: function () {
 
-  }
+  },
+
+  /**
+   * 跳转简历制作页
+   */
+  resume:function(){
+    wx.navigateTo({
+      url: '../../pages/my/my',
+      success: function(res) {},
+      fail: function(res) {},
+      complete: function(res) {},
+    })
+  },
 })
