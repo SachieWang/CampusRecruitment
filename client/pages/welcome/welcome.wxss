@@ -1,1 +1,5 @@
 /* pages/welcome/welcome.wxss */
+.hello{
+  font-size:  xx-large;
+  font-style:  oblique;
+}

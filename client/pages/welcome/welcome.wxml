@@ -1,4 +1,14 @@
 <!--pages/welcome/welcome.wxml-->
 <view class='container'>
-  <navigator open-type='switchTab' url='/pages/index/index'>校招宝</navigator>
+  <view>
+    <text class='hello'>面团</text>
+  </view>
+  <view>
+    <button bindtap='signin' disabled='{{disable}}'>登陆</button>
+  </view>
+  <view>
+    <checkbox-group bindchange='confirm'>
+      <checkbox>我同意面团小程序的条款</checkbox>
+    </checkbox-group>
+  </view>
 </view>
