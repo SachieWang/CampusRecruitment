@@ -70,9 +70,6 @@ Page({
   resume:function(){
     wx.navigateTo({
       url: '../../pages/my/my',
-      success: function(res) {},
-      fail: function(res) {},
-      complete: function(res) {},
     })
   },
 })

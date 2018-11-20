@@ -4,7 +4,7 @@
     <text class='hello'>面团</text>
   </view>
   <view>
-    <button bindtap='signin' disabled='{{disable}}'>登陆</button>
+    <button bindgetuserinfo="bindGetUserInfo" disabled='{{disable}}' open-type="getUserInfo">登陆</button>
   </view>
   <view>
     <checkbox-group bindchange='confirm'>

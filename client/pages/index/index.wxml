@@ -1,5 +1,5 @@
 <view class='container'>
-  <view class='wide' bindtap='login'>
+  <view class='wide'>
     <image class="userinfo-avatar" src="{{logged ? userInfo.avatarUrl : './user-unlogin.png'}}" background-size="cover"></image>
   </view>
 

@@ -9,7 +9,7 @@ Page({
    * 页面的初始数据
    */
   data: {
-    debug:false,
+    debug:true,
     isLogined: false,
     isResumed: false
   },

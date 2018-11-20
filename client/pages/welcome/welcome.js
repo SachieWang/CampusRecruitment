@@ -1,11 +1,17 @@
 // pages/welcome/welcome.js
+var util = require('../../utils/util.js')
+var qcloud = require('../../vendor/wafer2-client-sdk/index')
+var config = require('../../config')
+
 Page({
   /**
    * 页面的初始数据
    */
   data: {
-    disable:true,
-    confirmed:false
+    userInfo: {},
+    logged: false,
+    disable: true,
+    confirmed: false
   },
 
   /**
@@ -63,22 +69,67 @@ Page({
   onShareAppMessage: function() {
 
   },
-  signin: function() {
+
+  /**
+   * 用户授权
+   * 解禁登陆
+   */
+  confirm: function() {
+    if (this.data.confirmed == false) {
+      this.setData({
+        disable: false
+      })
+      this.data.confirmed=true
+    } else {
+      this.setData({
+        disable: true
+      })
+      this.data.confirmed=false
+    }
+  },
+
+  /**
+   * 用户授权后登陆
+   * 获取用户基本信息并跳转
+   */
+  bindGetUserInfo: function() {
+    if (this.data.logged) return
+    util.showBusy('正在登录')
+    const session = qcloud.Session.get()
+    if (session) {
+      // 第二次登录
+      // 或者本地已经有登录态
+      // 可使用本函数更新登录态
+      qcloud.loginWithCode({
+        success: res => {
+          this.setData({
+            userInfo: res
+          })
+          util.showSuccess('登录成功')
+        },
+        fail: err => {
+          console.error(err)
+          util.showModel('登录错误', err.message)
+        }
+      })
+    } else {
+      // 首次登录
+      qcloud.login({
+        success: res => {
+          this.setData({
+            userInfo: res,
+            logged: true
+          })
+          util.showSuccess('登录成功') 
+        },
+        fail: err => {
+          console.error(err)
+          util.showModel('登录错误', err.message)
+        }
+      })
+    }
     wx.switchTab({
       url: '../index/index'
     })
-  },
-  confirm:function(){
-    if (this.data.confirmed==false){
-      this.setData({
-        confirmed:true,
-        disable: false
-      })
-    }else{
-      this.setData({
-        confirmed:false,
-        disable: true
-      })
-    }
   }
 })
