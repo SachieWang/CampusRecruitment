@@ -1,12 +1,6 @@
 {
-	"client": "./client",
-	"svr": "./server",
-	"miniprogramRoot": "./client",
-	"qcloudRoot": "./server",
-	"setting": {
-		"newFeature": true
-	},
-	"appid": "wxe943132f7acdc70c",
-	"projectname": "%E9%9D%A2%E5%9B%A2",
-	"condition": {}
+  "client": "./client",
+  "svr": "./server",
+  "miniprogramRoot": "./client",
+  "qcloudRoot": "./server"
 }

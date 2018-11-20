@@ -27,7 +27,7 @@ const CONF = {
 
     cos: {
         /**
-         * 区域
+         * 地区简称
          * @查看 https://cloud.tencent.com/document/product/436/6224
          */
         region: 'ap-guangzhou',
@@ -38,7 +38,8 @@ const CONF = {
     },
 
     // 微信登录态有效期
-    wxLoginExpires: 7200
+    wxLoginExpires: 7200,
+    wxMessageToken: 'abcdefgh'
 }
 
-module.exports = process.env.NODE_ENV === 'local' ? Object.assign({}, CONF, require('./config.local')) : CONF;
+module.exports = CONF
